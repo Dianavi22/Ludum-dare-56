@@ -11,13 +11,14 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     private void Update()
     {
-        if(!_isSpawning) {
-            SpawnRate();
+        if (!_isSpawning)
+        {
+            StartCoroutine(SpawnRate());
         }
     }
 
@@ -32,9 +33,8 @@ public class EnemySpawner : MonoBehaviour
         _isSpawning = false;
     }
 
-    private void Spawn() 
+    private void Spawn()
     {
-     print("Instantiate");
-     Instantiate(_enemy, _currentSpawner.gameObject.transform.position, Quaternion.identity);
+        Instantiate(_enemy, _currentSpawner.gameObject.transform.position, Quaternion.identity);
     }
 }
