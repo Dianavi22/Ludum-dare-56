@@ -7,6 +7,9 @@ using UnityEngine;
 // Il faut lui passer les parammtres : Textes a ecrire, emplacement du texte, secondes entre chaque caracteres
 public class TypeSentence : MonoBehaviour
 {
+
+    [SerializeField] AudioSource m_AudioSource;
+    [SerializeField] AudioClip m_Clip;
    // Parametres 
    private TMP_Text _textPlace;
    private string _textToShow;

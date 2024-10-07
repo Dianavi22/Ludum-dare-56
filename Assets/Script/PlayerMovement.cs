@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     private Rigidbody2D rb2d;
     [SerializeField] GameManager _gameManager;
+    [SerializeField] AudioSource _audioSource;
+    [SerializeField] AudioClip _hit;
 
     void Start()
     {
@@ -25,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        _audioSource.PlayOneShot(_hit, 0.1f);
         if (collision.collider.CompareTag("Enemy"))
         {
             _gameManager.GameOver();
