@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed;
     private Rigidbody2D rb2d;
+    [SerializeField] GameManager _gameManager;
 
     void Start()
     {
@@ -26,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.collider.CompareTag("Enemy"))
         {
-            print("GameOver");
+            _gameManager.GameOver();
         }
     }
 }

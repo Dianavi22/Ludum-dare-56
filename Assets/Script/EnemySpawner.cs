@@ -26,7 +26,6 @@ public class EnemySpawner : MonoBehaviour
         }
         if (!_isSpawningEnemyRocket)
         {
-            print("_isSpawningEnemyRocket");
 
             StartCoroutine(SpawnRateExplosionEnemy());
         }
@@ -50,7 +49,6 @@ public class EnemySpawner : MonoBehaviour
     }
     private IEnumerator SpawnRateExplosionEnemy()
     {
-        print("SpawnRateExplosionEnemy");
         _isSpawningEnemyRocket = true;
         _gameManager.nbEnemy++;
         int i = Random.Range(0, _spawners.Count);
@@ -64,7 +62,6 @@ public class EnemySpawner : MonoBehaviour
 
     private void Spawn(int index)
     {
-        print("spawn");
 
         _currentSpawn = Instantiate(_enemy[index], _currentSpawner.gameObject.transform.position, Quaternion.identity);
     }

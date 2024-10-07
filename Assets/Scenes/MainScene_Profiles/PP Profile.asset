@@ -47,13 +47,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f34b98873b01e49a3698fcf5d34b7d, type: 3}
   m_Name: ColorReduction
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
   colorLevels:
     overrideState: 1
-    value: 256
+    value: 105
 --- !u!114 &6616280848149651510
 MonoBehaviour:
   m_ObjectHideFlags: 3
