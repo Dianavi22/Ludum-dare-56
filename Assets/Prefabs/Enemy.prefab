@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 735527598022346565}
   - component: {fileID: 5464495301885840773}
   - component: {fileID: 4888157638007908905}
+  - component: {fileID: 9022296693444847273}
   m_Layer: 5
   m_Name: SnailCanvas
   m_TagString: Untagged
@@ -247,6 +248,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &9022296693444847273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3552837605037902748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef25c750392df604981f55997be14263, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3578780684125734281
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,6 +271,7 @@ GameObject:
   - component: {fileID: 2628091305511012142}
   - component: {fileID: 6637892460989426241}
   - component: {fileID: 5820382607630792101}
+  - component: {fileID: 4046774334212739096}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -331,6 +345,24 @@ CircleCollider2D:
   m_Offset: {x: -0.0017830133, y: 0}
   serializedVersion: 2
   m_Radius: 0.24638617
+--- !u!114 &4046774334212739096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3578780684125734281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f644ce8c6c7f84b862c01759d48e6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _txt:
+  - Je suis un escargot
+  - Je suis une Limace
+  - Je vais te tuer
+  _text: {fileID: 8559809518960067071}
+  _bubble: {fileID: 5075150118404177161}
 --- !u!1 &3652268718838116073
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +397,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.56, y: 0.05}
+  m_AnchoredPosition: {x: 0.34, y: 0.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8285774583850839557
@@ -423,10 +455,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 39.25
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -459,7 +491,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 39.827583, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
