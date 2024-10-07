@@ -4,13 +4,5 @@ using UnityEngine;
 
 public class CanvasSnail : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        transform.forward = Camera.main.transform.forward;
-    }
+    
 }

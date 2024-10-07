@@ -26,7 +26,7 @@ public class TextSnail : MonoBehaviour
     private  IEnumerator RandomText()
     {
         isShowing = true;
-
+        print("HERE");
         yield return new WaitForSeconds(Random.Range(10, 20));
         _bubble.SetActive(true);
         _text.text = "";

@@ -202,8 +202,8 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_VertexColorAlwaysGammaSpace: 1
+  m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -293,9 +293,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7702965772218013737}
   - {fileID: 439248527224424334}
   - {fileID: 8912524817513096640}
-  - {fileID: 7702965772218013737}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6637892460989426241
@@ -363,9 +363,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _txt:
-  - Je suis un escargot
-  - Je suis une Limace
+  - 'I''m gonna Kill you '
+  - 'I Will catch you '
   - Je vais te tuer
+  - STAY HERE
+  - Where are you
+  - hahahaHAHAHAAAAA
+  - Come heeere
   _text: {fileID: 8559809518960067071}
   _bubble: {fileID: 5075150118404177161}
 --- !u!82 &4394200140652062704
