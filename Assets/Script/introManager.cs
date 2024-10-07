@@ -12,7 +12,7 @@ public class introManager : MonoBehaviour
     public bool isIntroFinish = false;
     void Start()
     {
-        _typeSentence.WriteMachinEffect("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,", _text, 0.02f);
+        _typeSentence.WriteMachinEffect("you play as a human trying to escape immortal snails, known for their deadly legend. Though slow, they are determined to kill you if they catch you. You must run through your house to avoid them, using your surroundings to survive against this strange yet relentless threat.", _text, 0.02f);
         StartCoroutine(Snails());
     }
 

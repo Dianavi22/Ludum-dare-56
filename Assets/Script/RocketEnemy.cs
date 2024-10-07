@@ -52,7 +52,6 @@ public class RocketEnemy : MonoBehaviour
 
         if (collision.CompareTag("DeathZone"))
         {
-            print("DeathZone");
             _gameManager.nbEnemy--;
             Destroy(gameObject);
         }
@@ -60,13 +59,5 @@ public class RocketEnemy : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("DeathZone"))
-        {
-            print("DeathZone");
-            _gameManager.nbEnemy--;
-            Destroy(gameObject);
-        }
-    }
+   
 }

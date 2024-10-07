@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] GameManager _gameManager;
     [SerializeField] AudioSource _audioSource;
     [SerializeField] AudioClip _hit;
+    [SerializeField] ParticleSystem _hitWall;
 
     void Start()
     {
@@ -28,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         _audioSource.PlayOneShot(_hit, 0.1f);
+        _hitWall.Play();
         if (collision.collider.CompareTag("Enemy"))
         {
             _gameManager.GameOver();
