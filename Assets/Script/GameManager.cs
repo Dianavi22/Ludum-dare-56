@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     private bool _isPaused = false;
+    public int nbEnemy;
+    [SerializeField] private TMP_Text _nbSnails;
     void Start()
     {
         
@@ -12,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        _nbSnails.text = nbEnemy.ToString();
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (_isPaused)

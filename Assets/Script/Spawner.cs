@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public ParticleSystem _mySpawnPart;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
