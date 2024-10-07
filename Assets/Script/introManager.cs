@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class introManager : MonoBehaviour
+public class IntroManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> _snails = new List<GameObject>();
     [SerializeField] TypeSentence _typeSentence;
@@ -12,13 +12,16 @@ public class introManager : MonoBehaviour
     public bool isIntroFinish = false;
     void Start()
     {
-        _typeSentence.WriteMachinEffect("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,", _text, 0.02f);
+        _typeSentence.WriteMachinEffect("Lorem ipsum dolor sit amet, consectetur adipiscing elit,", _text, 0.04f);
         StartCoroutine(Snails());
     }
 
     void Update()
     {
-        
+        if(isIntroFinish == true)
+        {
+            _typeSentence.StopWriteMachineSound();
+        }
     }
 
     private IEnumerator Snails()

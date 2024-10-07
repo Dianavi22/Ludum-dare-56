@@ -6,10 +6,13 @@ public class EnemyMovement : MonoBehaviour
 {
     private GameObject _player;
     [SerializeField] float _speed;
+    [SerializeField] AudioSource _moveSound;
+    [SerializeField] AudioClip[] _clips;
     private Vector3 _enemyDir;
     void Start()
     {
         _player = FindObjectOfType<PlayerMovement>().gameObject;
+        StartCoroutine(MovementSoundCoroutine());
     }
 
     void Update()
@@ -20,4 +23,16 @@ public class EnemyMovement : MonoBehaviour
 
         gameObject.transform.LookAt(_player.transform);
     }
+
+    IEnumerator MovementSoundCoroutine()
+    {
+        while(true)
+        {
+            _moveSound.clip = _clips[Random.Range(0, _clips.Length - 1)];
+            _moveSound.Play();
+            yield return new WaitForSeconds(Random.Range(2, 6));
+        }
+
+    }
 }
+    

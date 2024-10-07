@@ -29,6 +29,12 @@ public class TypeSentence : MonoBehaviour
             yield return new WaitForSeconds(_timeBetweenChar);
             place.text += letter;
             yield return null;
+            m_AudioSource.Play();
         }
+    }
+
+    public void StopWriteMachineSound()
+    {
+        StopAllCoroutines();
     }
 }

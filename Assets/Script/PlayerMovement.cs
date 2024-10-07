@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] GameManager _gameManager;
     [SerializeField] AudioSource _audioSource;
     [SerializeField] AudioClip _hit;
+    [SerializeField] AudioClip _ded;
 
     void Start()
     {
@@ -30,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
         _audioSource.PlayOneShot(_hit, 0.1f);
         if (collision.collider.CompareTag("Enemy"))
         {
+            _audioSource.clip = _ded;
+            _audioSource.Play();
             _gameManager.GameOver();
         }
     }

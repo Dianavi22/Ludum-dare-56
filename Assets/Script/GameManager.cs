@@ -17,9 +17,16 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject _introDesactivable;
     [SerializeField] private GameObject _imageIntro;
+    [SerializeField] private IntroManager _introManager;
+
+    [SerializeField] private AudioSource _audioManager;
+    [SerializeField] private AudioClip _startClickSound;
+    [SerializeField] private AudioClip _gameOverSound;
 
     [SerializeField] GameObject _player;
     [SerializeField] GameObject _spawnEnemy;
+
+    public bool isGameOver = false;
 
     private bool _isEndLerp = false;
 
@@ -30,7 +37,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1;
-
+        _audioManager.clip = _startClickSound;
     }
 
     void Update()
@@ -74,6 +81,7 @@ public class GameManager : MonoBehaviour
 
     public void Retry()
     {
+        isGameOver = false;
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
@@ -85,6 +93,9 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        isGameOver = true;
+        _audioManager.clip = _gameOverSound;
+        _audioManager.Play();
         Time.timeScale = 0;
         _gameOverCanvas.SetActive(true);
         _nbSnailsGO.text = nbEnemy.ToString();
@@ -93,7 +104,9 @@ public class GameManager : MonoBehaviour
     private IEnumerator SetUpGame()
     {
 
+        _audioManager.Play();
         _introDesactivable.SetActive(false);
+        _introManager.isIntroFinish = true;
         yield return new WaitForSeconds(0.4f);
 
         if (lerpTime < lerpDuration)
