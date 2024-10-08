@@ -26,4 +26,12 @@ public class MainMenu : MonoBehaviour
     {
         _credits.SetActive(false);
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            CreditButtonClose();
+        }
+    }
 }
